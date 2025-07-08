@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>موقع ذكاء اصطناعي</title>
+  <meta charset="UTF-8" />
+  <title>مساعد الذكاء الاصطناعي</title>
 </head>
 <body>
-    <h1>مرحبًا بك في موقعي الذكي!</h1>
-    <p>هذا موقع ذكاء اصطناعي بسيط.</p>
+  <h1>مرحبًا بك في مساعد الذكاء الاصطناعي!</h1>
+  <p>اكتب سؤالك وسنحاول الرد عليك (هذا عرض فقط، بدون ذكاء حقيقي حاليًا).</p>
+
+  <input type="text" id="question" placeholder="اكتب سؤالك هنا" />
+  <button onclick="respond()">إرسال</button>
+
+  <p id="response" style="margin-top: 20px;"></p>
+
+  <script>
+    function respond() {
+      let question = document.getElementById('question').value;
+      let responseText = `سؤالك كان: "${question}"... (لكن ما عندي ذكاء حقيقي هنا 😅)`;
+      document.getElementById('response').innerText = responseText;
+    }
+  </script>
 </body>
 </html>
